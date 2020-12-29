@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grapp</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
+	<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="eel.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+</head>
+<body class="stop-scrolling">
+
+<!-- Start page -->
+
+	<div id='first'>
+		<div id="second">
+			<p class="main-p made-by">Made by <br><span class="switch" data-replace="Apelgans Dominica">Andrew Glukhov</span></p>
+			<a class="main-a" href="javascript:PopUpShow()">Linear graph</a>
+			<a class="main-a" id="two" href="javascript:PopUpShow1()">Charts</a>
+			<a class="main-a" id="three" href="javascript:PopUpShow2()">Quadratic graph</a>
+		</div>
+	</div>
+
+<!-- Line graph page -->
+
+	<div class="first" id='first1'>
+		<div style="text-align:left; display:inline-block; height:32px;">
+			<a href="javascript:PopUpHide()">
+				<img src="https://icons-for-free.com/iconfiles/png/512/arrow+back+18px-131987942775113717.png">
+			</a>
+		</div>
+		<div style="display:inline-block; margin-left:64%; height:32px;">
+			<a href="javascript:Warning()">
+				<img src="https://www.flaticon.com/svg/static/icons/svg/15/15933.svg">
+			</a>
+		</div>
+		<div class="second" id="second1">
+		    <p id="formula" class="main-p">
+				This function builds a line. <br>Linear graph formula is<br> y = kx + b
+			</p>
+		</div>
+		<div style="margin-top:50px;">
+			<span>y=</span>
+			<input id="k" type="text" placeholder="k" onfocus="this.placeholder = ''" onblur="this.placeholder = 'k'">
+			<span>* x</span>
+			<div class="radiobox">
+				<span class="radio">
+					<label class="label">
+						<input class="radio1" type="radio" name="symbol1" value="-">-
+					</label>
+				</span>
+				<span class="radio">
+					<label class="label">
+						<input class="radio1" type="radio" name="symbol1" value="+" checked>+
+					</label>
+				</span>
+			</div>
+			<input id="b" type="text" placeholder="b" onfocus="this.placeholder = ''" onblur="this.placeholder = 'b'">
+		</div>
+		<a class="a1" href="javascript:getline()">
+			Continue
+		</a>
+	</div>
+
+<!-- Charts page -->
+
+	<div class="first" id="first2">
+		<div style="text-align:left; display:inline-block; height:32px; margin-right:230px;">
+			<a href="javascript:PopUpHide1()">
+				<img src="https://icons-for-free.com/iconfiles/png/512/arrow+back+18px-131987942775113717.png">
+			</a>
+		</div>
+		<div class="second" id="second2">
+			<p class="main-p made-by">Made by <br><span class="switch" data-replace="Apelgans Dominica">Andrew Glukhov</span></p>
+			<a class="main-a" href="javascript:PopUpShow5()">Simple chart</a>
+			<a class="main-a" href="javascript:PopUpShow3()">Pie Chart</a>
+			<a class="main-a" href="javascript:PopUpShow4()">Bar chart</a>
+		</div>
+	</div>
+
+<!-- Quadratic graph page -->
+
+	<div class="first" id='first3'>
+		<div style="text-align:left; display:inline-block; height:32px;">
+			<a href="javascript:PopUpHide2()">
+				<img src="https://icons-for-free.com/iconfiles/png/512/arrow+back+18px-131987942775113717.png">
+			</a>
+		</div>
+		<div style="display:inline-block; margin-left:64%; height:32px;">
+			<a href="javascript:Warning()">
+				<img src="https://www.flaticon.com/svg/static/icons/svg/15/15933.svg">
+			</a>
+		</div>
+		<div class="second" id="second3">
+			<p id="formula1" class="main-p">
+				This function builds quadratic graph.<br>Quadric graph formula is<br>y = ax² + bx + c
+			</p>
+		</div>
+		<div style="margin-top:50px;">
+			<span>y=</span>
+			<input id="a" type="text" placeholder="a" onblur="this.placeholder = 'a'" onfocus="this.placeholder = ''">
+			<span>*</span>
+			<span id="x_degree">
+				<input id="degree" class="x" type="text" placeholder="pow" onblur="this.placeholder = 'pow'" onfocus="this.placeholder = ''">
+				<span class="x">x</span>
+			</span>
+			<div class="radiobox">
+				<span class="radio">
+					<label class="label">
+						<input class="radio1" type="radio" name="symbol2" value="-">-
+					</label>
+				</span>
+				<span class="radio">
+					<label class="label">
+						<input class="radio1" type="radio" name="symbol2" value="+" checked>+
+					</label>
+				</span>
+			</div>
+			<input id="b1" type="text" placeholder="b" onblur="this.placeholder = 'b'" onfocus="this.placeholder = ''">
+			<span>* x</span>
+			<div class="radiobox">
+				<span class="radio">
+					<label class="label">
+						<input class="radio1" type="radio" name="symbol3" value="-">-
+					</label>
+				</span>
+				<span class="radio">
+					<label class="label">
+						<input class="radio1" type="radio" name="symbol3" value="+" checked>+
+					</label>
+				</span>
+			</div>
+			<input id="c" type="text" placeholder="c" onblur="this.placeholder = 'c'" onfocus="this.placeholder = ''">
+		</div>
+		<a class="a1" href="javascript:getquadric()">
+			Continue
+		</a>
+	</div>
+
+<!-- Pie chart page -->
+
+	<div class="first" id='first4'>
+		<div style="text-align:left; display:inline-block; height:32px; margin-right:229px;">
+			<a href="javascript:PopUpHide3()">
+				<img src="https://icons-for-free.com/iconfiles/png/512/arrow+back+18px-131987942775113717.png">
+			</a>
+		</div>
+		<div class="second" id="second4">
+		  <p class="main-p formula">Enter all values separated by comma - ', '</p>
+		</div>
+		<div style="margin-top:45px;">
+			<div>
+				<input id="labels1" style="width:75px;" type="text" placeholder="Enter labels" onblur="this.placeholder = 'Enter labels'" onfocus="this.placeholder = ''">
+				<input id="sizes" style="width:75px;" type="text" placeholder="Enter sizes" onblur="this.placeholder = 'Enter sizes'" onfocus="this.placeholder = ''">
+			</div>
+			<div>
+				<input id="explodes" style="width:75px; margin-top:5px;" type="text" placeholder="Enter breaks" onblur="this.placeholder = 'Enter breaks'" onfocus="this.placeholder = ''">
+			</div>
+		</div>
+		<a class="a1" href="javascript:getpie()">
+			Continue
+		</a>
+	</div>
+
+<!-- Bar chart page -->
+
+	<div class="first" id='first5'>
+		<div style="text-align:left; display:inline-block; height:32px; margin-right:229px;">
+			<a href="javascript:PopUpHide4()">
+				<img src="https://icons-for-free.com/iconfiles/png/512/arrow+back+18px-131987942775113717.png">
+			</a>
+		</div>
+		<div class="second" id="second5">
+		  <p class="main-p formula">Enter all values separated by comma - ', '</p>
+		</div>
+		<div style="margin-top:45px;">
+			<div>
+				<input id="labels2" style="width:75px;" value="" type="text" placeholder="Enter labels" onblur="this.placeholder = 'Enter labels'" onfocus="this.placeholder = ''">
+				<input id="groups" style="width:75px; margin-top:5px;" value="" type="text" placeholder="Enter groups" onblur="this.placeholder = 'Enter groups'" onfocus="this.placeholder = ''">
+			</div>
+			<div>
+				<input id="values" style="width:75px; margin-top:5px;" value="" type="text" placeholder="Enter values" onblur="this.placeholder = 'Enter values'" onfocus="this.placeholder = ''">
+			</div>
+		</div>
+		<a class="a1" style="margin-top:86px;" href="javascript:getbar()">
+			Continue
+		</a>
+	</div>
+
+<!-- Simple chart page -->
+
+	<div class="first" id='first6'>
+		<div style="text-align:left; display:inline-block; height:32px;">
+			<a href="javascript:PopUpHide5()">
+				<img src="https://icons-for-free.com/iconfiles/png/512/arrow+back+18px-131987942775113717.png">
+			</a>
+		</div>
+		<div style="display:inline-block; margin-left:64%; height:32px;">
+			<a href="javascript:Warning()">
+				<img src="https://www.flaticon.com/svg/static/icons/svg/15/15933.svg">
+			</a>
+		</div>
+		<div class="second" id="second6">
+		  <p class="main-p formula">Enter 2 values and click one of the buttons</p>
+		</div>
+		<div style="margin-top:50px;">
+			<div>
+				<input id="coordx" style="width:75px;" type="text" placeholder="Coordx" onblur="this.placeholder = 'Coordx'" onfocus="this.placeholder = ''">
+				<input id="coordy" style="width:75px;" type="text" placeholder="Coordy" onblur="this.placeholder = 'Coordy'" onfocus="this.placeholder = ''">
+			</div>
+		</div>
+		<a class="a1 half" href="javascript:getsimplechart('More')">
+			Point
+		</a>
+		<a class="a1 half" style="margin-left:3px;" href="javascript:getsimplechart('Continue')">
+			Continue
+		</a>
+	</div>
+
+<!-- Warning -->
+
+	<div id="warning">
+		<div class="warning">
+			<p class="main-p formula">Do you want to clear canvas?</p>
+			<div style="margin-top:10px;">
+				<a class="warning-button" href="javascript:HideWarning(); Clear()">Yes</a>
+				<a class="warning-button" style="margin-left:60px;" href="javascript:HideWarning()">No</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
